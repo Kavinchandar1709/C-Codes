@@ -30,13 +30,13 @@ public class MainMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            
-            transform.Rotate(0f, 40 * Time.deltaTime, 0f);
+
+            mvelocity.x = 1.0f;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0f, -40 * Time.deltaTime, 0f);
+            mvelocity.x = -1.0f;
         }
 
         transform.Translate(mvelocity.normalized * Time.deltaTime * mseed );
